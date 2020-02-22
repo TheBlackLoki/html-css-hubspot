@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* start debug */
+div{
+  height: 250px;
+  background-color: red;
+  border: solid 1px yellow;
+}
+
+
+/* end debug */
+body > * > *{
+  padding: 0 10%;
+}
+main{
+  position: relative;
+}
+.fixed{
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 45px;
+  background-color: #f4f9fd;
+  border-bottom: solid 1px black;
+  z-index: 1;
+}
+.barrasuperiore{
+  margin-top: 45px;
+  height: 50px;
+}
+
+.jumbotron{
+  background-color: rgb(255, 244, 239);
+  background-image: url(../img/jumbotron.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 380px;
+}
+.linea{
+  position: absolute;
+  background-color: rgb(175, 235, 228);
+  height: 45px;
+  width: 100%;
+  transform: translate(0%,-100%);
+  border: solid black 1px;
+}

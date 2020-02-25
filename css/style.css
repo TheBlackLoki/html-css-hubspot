@@ -9,8 +9,16 @@ html{
 body{
   font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0.5em 0;
+}
+p{
+  font-size: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 /* start debug */
-/* body div, footer div{
+/* .q{
   height: 250px;
   background-color: red;
   border: solid 1px yellow;
@@ -18,13 +26,14 @@ body{
 
 
 /* end debug */
-body > * > *, .sopra{
-  padding: 0 10%;
+body > * > *, .sopra, .testojumbo{
+  padding: 0 5%;
 }
 main{
   position: relative;
 }
 /* caratteristiche barra fixed */
+
 .fixed{
   position: fixed;
   top:0;
@@ -46,11 +55,15 @@ header .fixed::after{
 .left{
   float: left;
 }
-ul{
+ul li{
   list-style-type: none;
 }
-header .fixed ul li{
+header .fixed ul li:not(.primo){
   padding: 0px 15px;
+}
+.primo{
+  padding-left: 0px;
+  padding-right: 15px;
 }
 .fixed ul li:nth-child(1){
   border-right:2px solid black;
@@ -67,14 +80,13 @@ a{
 .login a{
   color: #ff7a59;
 }
-.button{
+
+.button a{
   background-color: #ff7a59;
   border-radius: 5px;
-}
-.button a{
   color: #fff;
 }
-ul li > *{
+header ul li > *{
   font-size: 0.75rem;
   display: inline-block;
   padding: 10px 15px 5px;
@@ -95,20 +107,76 @@ ul li > *{
   display: table;
   content: "";
 }
-
+/* jumbotron caratteristiche */
 .jumbotron{
   background-color: rgb(255, 244, 239);
   background-image: url(../img/jumbotron.png);
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-  height: 380px;
+  background-position: right bottom;
+  background-size:contain;
+  padding: 72px 0px 200px;
 }
-.linea{
-  position: absolute;
-  background-color: rgb(175, 235, 228);
-  height: 45px;
+.testojumbo{
+  max-width: 65%;
+}
+.testojumbo h1{
+  font-size: 3em;
+}
+.testojumbo p{
+  margin: 35px 0px;
+  line-height: 25px;
+}
+.testojumbo .button a{
+  padding: 20px;
+  margin: 10px 0px;
+}
+.testojumbo .button p{
+max-width: 200px;
+}
+/* caratteristiche footer */
+footer::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+.listaopzioni  ul  ul{
+  float: left;
+  width: 25%;
+}
+.listaopzioni ul ul ul li{
+  display: inline-block;
+
+}
+.listaopzioni ul ul ul {
   width: 100%;
-  transform: translate(0%,-100%);
-  border: solid black 1px;
+}
+footer{
+  color: white;
+  background-color: #33475b;
+}
+footer a{
+  color: #cbd6e2;
+}
+.listaopzioni li li{
+  padding: 5px;
+}
+.grassetto{
+  margin-top: 0px;
+  font-weight: 700;
+  color: white
+}
+.lingue a{
+  display: inline-block;
+  padding: 30px 10px
+}
+.lingue{
+  text-align: center;
+  border-bottom: solid 1px white;
+}
+.pièpagina a , .logopiè {
+  padding-right:15px;
+  padding-top: 20px;
+}
+.logopiè p{
+  font-size: 0.6em;
 }

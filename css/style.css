@@ -10,11 +10,11 @@ body{
   font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 /* start debug */
-body div, footer div{
+/* body div, footer div{
   height: 250px;
   background-color: red;
   border: solid 1px yellow;
-}
+} */
 
 
 /* end debug */
@@ -46,7 +46,7 @@ header .fixed::after{
 .left{
   float: left;
 }
-header .fixed ul{
+ul{
   list-style-type: none;
 }
 header .fixed ul li{
@@ -55,7 +55,7 @@ header .fixed ul li{
 .fixed ul li:nth-child(1){
   border-right:2px solid black;
 }
-.fixed a{
+a{
   color: black;
   text-decoration: none;
 }
@@ -83,14 +83,17 @@ ul li > *{
   margin: 0px 10px;
 }
 
-
-
-
-
-
+/* barra superiore caratteristiche */
 .barrasuperiore{
   margin-top: 64px;
-  height: 50px;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.barrasuperiore::after{
+  clear: both;
+  display: table;
+  content: "";
 }
 
 .jumbotron{

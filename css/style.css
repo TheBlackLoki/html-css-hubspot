@@ -3,8 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  font-size: 18px;
+}
+body{
+  font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 /* start debug */
-div{
+body div, footer div{
   height: 250px;
   background-color: red;
   border: solid 1px yellow;
@@ -12,23 +18,78 @@ div{
 
 
 /* end debug */
-body > * > *{
+body > * > *, .sopra{
   padding: 0 10%;
 }
 main{
   position: relative;
 }
+/* caratteristiche barra fixed */
 .fixed{
   position: fixed;
   top:0;
   width: 100%;
-  height: 45px;
+  height: auto;
+  padding:15px 0px;
   background-color: #f4f9fd;
   border-bottom: solid 1px black;
   z-index: 1;
 }
+header .fixed::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}
+header .fixed ul{
+  list-style-type: none;
+}
+header .fixed ul li{
+  padding: 0px 15px;
+}
+.fixed ul li:nth-child(1){
+  border-right:2px solid black;
+}
+.fixed a{
+  color: black;
+  text-decoration: none;
+}
+.login{
+  background-color: #fff;
+  border: 1px solid #ff7a59;
+  border-radius: 5px;
+}
+.login a{
+  color: #ff7a59;
+}
+.button{
+  background-color: #ff7a59;
+  border-radius: 5px;
+}
+.button a{
+  color: #fff;
+}
+ul li > *{
+  font-size: 0.75rem;
+  display: inline-block;
+  padding: 10px 15px 5px;
+}
+.testa{
+  margin: 0px 10px;
+}
+
+
+
+
+
+
 .barrasuperiore{
-  margin-top: 45px;
+  margin-top: 64px;
   height: 50px;
 }
 
